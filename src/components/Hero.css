@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+  padding-bottom: 4rem;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(184, 149, 74, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(44, 40, 36, 0.04), transparent 50%),
+    linear-gradient(180deg, var(--color-bg-elevated) 0%, var(--color-bg) 100%);
+}
+
+.hero__arc {
+  position: absolute;
+  right: -15%;
+  top: 15%;
+  width: min(55vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(184, 149, 74, 0.25);
+  opacity: 0.6;
+}
+
+.hero__arc::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px solid rgba(44, 40, 36, 0.06);
+}
+
+.hero__content {
+  position: relative;
+  max-width: 42rem;
+  padding-top: clamp(2rem, 8vw, 4rem);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 7vw, 4.25rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.5rem;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--color-accent-deep);
+}
+
+.hero__lead {
+  font-size: clamp(1.0625rem, 2vw, 1.1875rem);
+  font-weight: 300;
+  color: var(--color-ink-muted);
+  line-height: 1.65;
+  margin: 0 0 2.25rem;
+  max-width: 32rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--color-ink-soft), transparent);
+}
+
+@media (min-width: 768px) {
+  .hero__scroll-hint {
+    display: flex;
+  }
+}

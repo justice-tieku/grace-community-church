@@ -1,0 +1,79 @@
+.give {
+  padding-block: clamp(3rem, 8vw, 5rem);
+}
+
+.give__banner {
+  display: grid;
+  gap: 2rem;
+  padding: clamp(2rem, 5vw, 3rem);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 0%, rgba(184, 149, 74, 0.18), transparent 55%),
+    var(--color-ink);
+  color: var(--color-bg-elevated);
+}
+
+@media (min-width: 768px) {
+  .give__banner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.give .section-label {
+  color: var(--color-accent);
+}
+
+.give__title {
+  color: var(--color-bg-elevated);
+  margin-bottom: 0.75rem;
+}
+
+.give__text {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(247, 244, 239, 0.75);
+}
+
+.give__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .give__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.give__btn-primary {
+  background: var(--color-bg-elevated);
+  color: var(--color-ink);
+}
+
+.give__btn-primary:hover {
+  background: #fff;
+}
+
+.give__btn-secondary {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-bg-elevated);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.give__btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+}

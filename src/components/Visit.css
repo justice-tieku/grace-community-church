@@ -1,0 +1,112 @@
+.visit__card {
+  display: grid;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .visit__card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visit__content {
+  padding: clamp(2rem, 5vw, 3rem);
+}
+
+.visit__text {
+  color: var(--color-ink-muted);
+  font-weight: 300;
+  margin: 0 0 2rem;
+  max-width: 28rem;
+}
+
+.visit__details {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 480px) {
+  .visit__details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.visit__details h3 {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  margin: 0 0 0.5rem;
+}
+
+.visit__details p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+}
+
+.visit__details a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(184, 149, 74, 0.5);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.visit__details a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+.visit__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
+.visit__map {
+  min-height: 280px;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 900px) {
+  .visit__map {
+    border-top: none;
+    border-left: 1px solid var(--color-border);
+    min-height: auto;
+  }
+}
+
+.visit__map-inner {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(0deg, rgba(44, 40, 36, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(44, 40, 36, 0.03) 1px, transparent 1px),
+    linear-gradient(145deg, #e8e4dc, #d8d2c8);
+  background-size:
+    24px 24px,
+    24px 24px,
+    auto;
+}
+
+.visit__map-inner span {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--color-surface);
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
